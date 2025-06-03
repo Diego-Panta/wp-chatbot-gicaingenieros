@@ -1,0 +1,117 @@
+/* === Responsive para tablets y móviles === */
+@media (max-width: 768px) {
+    #chat-flotante-ventana {
+        width: 95vw;
+        height: 90vh;
+        right: 2.5vw;
+        bottom: 2vh;
+        border-radius: 10px;
+        max-height: none;
+    }
+
+    #chat-flotante-ventana {
+        display: none;
+        flex-direction: column;
+    }
+    
+    #chat-flotante-ventana.abierto {
+        display: flex;
+    }
+
+    .chat-header-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .chat-title,
+    .chat-subtitle {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .chat-body {
+        height: 100%;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .chat-intro .chat-logo img {
+        width: 60px;
+        height: auto;
+    }
+    .chat-input-container-message-area {
+        width: 100%;
+    }
+
+    .chat-input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .enviar-chat img {
+        width: 24px;
+    }
+
+    .mensaje-bot .mensaje-texto-send,
+    .mensaje-usuario .mensaje-texto-send {
+        /*max-width: 90%;*/
+        word-wrap: break-word;
+    }
+
+    .carrusel-contenedor {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .card-curso {
+        width: 80vw;
+        min-width: 250px;
+        margin-right: 10px;
+    }
+
+    .chat-input-container {
+        transform: translateY(0px);
+        opacity: 1;
+        padding: 0 20px;
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
+    #chat-flotante-ventana {
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+
+    .chat-title {
+        font-size: 16px;
+    }
+
+    .chat-subtitle {
+        font-size: 13px;
+    }
+
+    .chat-input {
+        font-size: 13px;
+    }
+
+    .chat-input-container {
+        padding: 5px;
+    }
+
+    .gicachat-boton-iniciar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .mensaje-opciones button {
+        font-size: 14px;
+        padding: 8px;
+        margin: 4px;
+    }
+}

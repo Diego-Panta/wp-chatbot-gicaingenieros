@@ -1,0 +1,81 @@
+/* Modal de confirmación para cerrar */
+
+.c-koXsWI {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--gicachat-color-modal-bg);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 12px 48px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+    transition: transform 320ms cubic-bezier(0.45, 1.29, 0.64, 1), box-shadow 300ms;
+}
+
+/* Botones */
+.c-dzcdPv {
+    border: 0;
+    padding: 0;
+}
+
+.c-jjMiVY {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: sans-serif;
+    width: 100%;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Botón de advertencia (cerrar) */
+.c-bXTvXv-XJvOL-type-warn {
+    background-color: var(--gicachat-color-modal-warn); /* rojo tipo Google */
+    color: white;
+    transition: background-color 150ms;
+}
+.c-bXTvXv-XJvOL-type-warn:hover {
+    background-color: var(--gicachat-color-modal-warn-hover);
+}
+
+/* Botón sutil (cancelar) */
+.c-bXTvXv-igaDqE-type-subtle {
+    background-color: var(--gicachat-color-modal-subtle-bg);
+  color: var(--gicachat-color-modal-subtle-text);
+    transition: background-color 150ms;
+}
+.c-bXTvXv-igaDqE-type-subtle:hover {
+    background-color: var(--gicachat-color-modal-subtle-hover);
+}
+
+.chat-overlay-oscuro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece el fondo */
+    z-index: 10;
+}
+
+#modal-cerrar-chat.c-koXsWI {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--gicachat-color-modal-bg);
+    box-shadow: 0 12px 48px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    z-index: 20; /* Encima del overlay */
+}

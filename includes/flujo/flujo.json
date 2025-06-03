@@ -1,0 +1,150 @@
+{
+  "start": {
+    "message": "¡Hola! Soy GicaBot, tu asistente virtual. Estoy para ayudarte con tus consultas.",
+    "options": [
+      {
+        "label": "Quiero consultar servicios",
+        "next": "servicios"
+      },
+      {
+        "label": "Ayúdame a encontrar un curso",
+        "next": "ayuda"
+      },
+      {
+        "label": "Tengo una pregunta sobre el curso",
+        "next": "pregunta"
+      },
+      {
+        "label": "Tengo un problema o necesito ayuda",
+        "next": "resolver"
+      }
+    ]
+  },
+  "servicios": {
+    "message": "Genial! ¿Qué servicio deseas?",
+    "options": [
+      {
+        "label": "Cursos",
+        "next": "tipo_curso"
+      },
+      {
+        "label": "Capacitación",
+        "url": "https://gicaingenieros.com/capacitacion-medida.html",
+        "next": "flujo_final_pregunta"
+      },
+      {
+        "label": "Consultoría en ISO 9001",
+        "url": "https://gicaingenieros.com/consultoria.html",
+        "next": "flujo_final_pregunta"
+      },
+      {
+        "label": "Eventos",
+        "url": "https://gicaingenieros.com/webinars/",
+        "next": "flujo_final_pregunta"
+      },
+      {
+        "label": "Ir al inicio",
+        "next": "start"
+      }
+    ]
+  },
+  "tipo_curso": {
+    "message": "Genial! ¿Te gustaría un curso virtual o presencial?",
+    "options": [
+      {
+        "label": "Virtual",
+        "next": "conectar_virtual"
+      },
+      {
+        "label": "Presencial",
+        "url": "https://gicainge...senciales.html",
+        "next": "flujo_final_pregunta"
+      }
+    ]
+  },
+  "conectar_virtual": {
+    "message": "Perfecto, estos son nuestros cursos virtuales!, espero te gusten",
+    "api_action": "listar_cursos_virtuales",
+    "next": "flujo_final_pregunta"
+  },
+  "problema": {
+    "message": "Con mucho gusto responderé a sus preguntas. ¿Le puedo ayudar en algo?",
+    "input": true,
+    "save_as": "pregunta_usuario",
+    "next": "resumir_pregunta"
+  },
+  "resolver": {
+    "message": "Con mucho gusto responderé a sus preguntas. ¿Le puedo ayudar en algo?",
+    "expect_response": true,
+    "handler": "resolver_problema"
+  },
+  "resumir_pregunta": {
+    "ai_action": "resumir_pregunta",
+    "next": "confirmar_resumen"
+  },
+  "confirmar_resumen": {
+    "message": "¿Esto resume su pregunta correctamente?: '{resumen_generado}'",
+    "options": [
+      {
+        "label": "Sí",
+        "next": "responder_directo"
+      },
+      {
+        "label": "No",
+        "next": "resumir_pregunta"
+      }
+    ]
+  },
+  "responder_directo": {
+    "ai_action": "responder_pregunta",
+    "next": "confirmar_satisfaccion"
+  },
+  "confirmar_satisfaccion": {
+    "message": "¿Está satisfecho con esta respuesta?",
+    "options": [
+      {
+        "label": "Sí",
+        "next": "flujo_final_pregunta"
+      },
+      {
+        "label": "No",
+        "next": "crear_respuesta"
+      }
+    ]
+  },
+  "crear_respuesta": {
+    "ai_action": "reformular_respuesta",
+    "next": "confirmar_satisfaccion"
+  },
+  "ayuda": {
+    "message": "¡Claro! ¿Tienes un objetivo o tema específico en mente?",
+    "expect_response": true,
+    "handler": "recomendar_curso"
+  },
+  "pregunta": {
+    "message": "Puedo ayudarte con esto, ¿qué te gustaría saber?",
+    "expect_response": true,
+    "handler": "pregunta_curso"
+  },
+  "flujo_final_pregunta": {
+    "message": "¡Genial! ¿Qué quieres hacer ahora?",
+    "options": [
+      {
+        "label": "Ver otros servicios",
+        "next": "servicios"
+      },
+      {
+        "label": "Ir al inicio",
+        "next": "start"
+      },
+      {
+        "label": "Terminar la conversación",
+        "next": "despedida"
+      }
+    ]
+  },
+  "despedida": {
+    "message": "Gracias por usar GicaBot. ¡Hasta pronto!",
+    "es_final": true
+  }
+}

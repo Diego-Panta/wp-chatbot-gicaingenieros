@@ -1,0 +1,49 @@
+:root {
+  --gicachat-color-flotante: #ea7f0b;
+  --gicachat-color-flotante-hover: #d16d09;
+  --gicachat-color-window: #fff;
+
+  --gicachat-color-header: #ea7f0b;
+  --gicachat-color-header-text: #fff;
+  --gicachat-color-header-hover: #ffdddd;
+
+  --gicachat-color-titulo: #1a1e23;
+  --gicachat-color-subtitulo: #656d75;
+
+  --gicachat-color-fondo-chat: #ffffff;
+  --gicachat-color-intro-parrafo: #666;
+
+  --gicachat-color-bot-msg-bg: #f1f2f2;
+  --gicachat-color-bot-msg-text: #1a1e23;
+  --gicachat-color-bot-link: #FF782D;
+  --gicachat-color-bot-link-hover: #30373f;
+
+  --gicachat-color-usuario-msg-bg: #ea7f0b;
+  --gicachat-color-usuario-msg-text: #ffffff;
+
+  --gicachat-color-escribiendo: #888;
+
+  --gicachat-color-modal-bg: #ffffff;
+  --gicachat-color-modal-warn: #d93025;
+  --gicachat-color-modal-warn-hover: #b3261e;
+  --gicachat-color-modal-subtle-bg: #f1f3f4;
+  --gicachat-color-modal-subtle-text: #202124;
+  --gicachat-color-modal-subtle-hover: #e0e0e0;
+
+  --gicachat-color-boton-iniciar-bg: #ea7f0b;
+  --gicachat-color-boton-iniciar-text: #ffffff;
+
+  --gicachat-color-scroll-button-bg: #ffffff;
+  --gicachat-color-scroll-button-text: #656d75;
+
+  --gicachat-color-input-text: #1a1e23;
+
+  --gicachat-color-enviar-chat-bg: #ea7f0b;
+
+  --gicachat-color-boton-opcion-bg: #fef3e7;
+  --gicachat-color-boton-opcion-text: #f4840b;
+  --gicachat-color-boton-opcion-hover: #ffe7cd;
+
+  --gicachat-color-border-error: #e53935;
+  --gicachat-color-mensaje-error: #b71c1c;
+}
